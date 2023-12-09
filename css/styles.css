@@ -1,0 +1,667 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.botonmenu {
+    background:#0073e6; /* Degradado de azul a rojo */
+    color: white; /* Color del texto en blanco */
+    padding: 10px 20px; /* Espaciado interior */
+    margin-top: 10px; /* Espacio superior */
+    font-size: 16px; /* Tamaño de fuente */
+    border: none;
+    border-radius: 10px; /* Esquinas redondeadas */
+    font-family: 'Arial', sans-serif; /* Fuente moderna */
+    cursor: pointer;
+}
+
+/* Cambiar el cursor al pasar el mouse sobre el botón */
+
+.botonmenu:hover {
+    background:#f4d423; /* Degradado con colores intermedios de verde y amarillo */    
+    color: black; /* Color del texto en blanco */
+}
+
+section {
+    height: 100vh; /* Ocupa el 100% del espacio vertical de la ventana */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+/* Estilos para la primera sección */
+#seccion1 {
+    background-color: white; /* Fondo blanco */
+    text-align: center; /* Centrado horizontal del contenido */    
+    font-family: "Arial", sans-serif; /* Fuente moderna */
+    padding: 20px; /* Espaciado interior */
+}
+
+.input-container{
+    width: 100%; /* Ancho del campo de texto */    
+    align-items: center; /* Tamaño de fuente */  
+    max-width: 420px; /* Ancho máximo para evitar que se extienda demasiado */
+}
+
+#identificacion {
+    border: 2px solid lightgray; /* Borde de color gris claro */
+    border-radius: 10px; /* Esquinas redondeadas */    
+    font-family: "Arial", sans-serif; /* Fuente moderna */
+    padding: 10px; /* Espaciado interior */    
+    width: 100%; /* Ancho del campo de texto */    
+    font-size: 16px; /* Tamaño de fuente */  
+    max-width: 420px; /* Ancho máximo para evitar que se extienda demasiado */
+    margin-bottom: 10px; /* Espacio inferior */   
+}
+
+#seccion2 {
+    display: flex;
+    flex-direction: row; /* Organiza las columnas en horizontal */
+    width: 100vw; /* Ancho igual al ancho de la vista */
+    height: 100vh; /* Alto igual al alto de la vista */  
+}
+
+#seccion4 {
+    display: flex;
+    flex-direction: row; /* Organiza las columnas en horizontal */
+    width: 100vw; /* Ancho igual al ancho de la vista */
+    height: 100vh; /* Alto igual al alto de la vista */  
+}
+
+#seccion3 {
+    background-color: white; /* Fondo blanco */
+    text-align: center; /* Texto centrado */
+    font-family: "Arial", sans-serif; /* Fuente moderna */
+    padding: 20px; /* Espacio interior */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+#container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#Parra {
+    color: #ff0000;
+    padding: 20px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    height: 7%;
+}
+
+#block1 {
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    height: 10%;
+}
+
+#block2 {
+    display: flex;
+    justify-content: space-between;
+    height: 80%;
+    width: 100%;
+    max-width: 540px;
+}
+
+#block3 {
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    height: 10%;
+}
+
+.agradecimiento-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: celebracion 3s ease-in-out; /* Duración de 3 segundos */
+}
+
+#telefono {
+    font-family: "Arial", sans-serif; /* Fuente moderna */
+    font-size: 16px; /* Tamaño de fuente */
+    border: 2px solid lightgray; /* Borde de color gris claro */
+    border-radius: 10px; /* Esquinas redondas */
+    padding: 10px; /* Espacio interior */
+    width: 60%; /* Ancho del campo de texto */
+    margin-bottom: 10px; /* Espacio inferior */
+}
+
+/* Animación de celebración */
+@keyframes celebracion {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.celebracion-activa {
+    animation: celebracion 1s ease-in-out;
+}
+
+#headerImage {
+    max-width: 60vw; /* Ajusta el ancho máximo al 50% del ancho de la ventana */
+    height: auto; /* Mantiene la proporción de aspecto de la imagen */
+}
+
+.columna {
+    flex: 1; /* Las columnas ocupan el mismo espacio */
+    height: 100%;
+    padding: 5px;
+    border: 1px;
+}
+
+/* Estilos para el contenido de las divisiones */
+.division p {
+    margin: 0;
+}
+
+/* Generar letras en orden en el margen izquierdo de cada división */
+.division::before {
+    content: attr(data-letter); /* Utiliza el atributo "data-letter" para las letras */
+    position: absolute;
+    left: -5px; /* Ajusta la posición a la izquierda */
+    color: white; /* Color del texto blanco */
+    background-color: black; /* Fondo negro */
+    padding: 5px; /* Añade relleno para mejorar la legibilidad */
+}
+
+/* Generar letras en orden en el margen izquierdo de cada división de la columna izquierda */
+.columna-izquierda .division::before {
+    content: attr(data-letter-left); /* Utiliza el atributo "data-letter-left" para las letras de la columna izquierda */
+    position: absolute;
+    left: -10px; /* Ajusta la posición a la izquierda */
+}
+
+/* Establecer el valor inicial del atributo "data-letter-left" y el incremento para la columna izquierda */
+.columna-izquierda .division:nth-child(1)::before {
+    content: "A";
+}
+
+.columna-izquierda .division:nth-child(2)::before {
+    content: "C";
+}
+
+.columna-izquierda .division:nth-child(3)::before {
+    content: "E";
+}
+
+.columna-izquierda .division:nth-child(4)::before {
+    content: "G";
+}
+
+.columna-izquierda .division:nth-child(5)::before {
+    content: "I";
+}
+
+.columna-izquierda .division:nth-child(6)::before {
+    content: "K";
+}
+
+/* Generar letras en orden en el margen izquierdo de cada división de la columna derecha */
+.columna-derecha .division::before {
+    content: attr(data-letter-right); /* Utiliza el atributo "data-letter-right" para las letras de la columna derecha */
+    position: absolute;
+    left: -10px; /* Ajusta la posición a la izquierda */
+}
+
+/* Establecer el valor inicial del atributo "data-letter-right" y el incremento para la columna derecha */
+.columna-derecha .division:nth-child(1)::before {
+    content: "B";
+}
+
+.columna-derecha .division:nth-child(2)::before {
+    content: "D";
+}
+
+.columna-derecha .division:nth-child(3)::before {
+    content: "F";
+}
+
+.columna-derecha .division:nth-child(4)::before {
+    content: "H";
+}
+
+.columna-derecha .division:nth-child(5)::before {
+    content: "J";
+}
+
+.columna-derecha .division:nth-child(6)::before {
+    content: "L";
+}
+
+/* Estilos para las divisiones */
+.division {
+    border: 1px solid #999;
+    margin: 5px;
+    background-color: #fff;
+    height: 15%; /* Establecer la altura base de 2.5 veces el tamaño del contenido */
+    position: relative; /* Para posicionar el contenido antes */
+    display: flex; /* Usar flexbox para alinear elementos internos */
+    align-items: center; /* Centrar verticalmente los elementos internos */
+}
+
+.division2 {
+    border: 1px solid #999;
+    margin: 5px;
+    background-color: #fff;
+    height: 30%; /* Establecer la altura base de 2.5 veces el tamaño del contenido */
+    position: relative; /* Para posicionar el contenido antes */
+    display: flex; /* Usar flexbox para alinear elementos internos */
+    align-items: center; /* Centrar verticalmente los elementos internos */
+}
+
+/* Estilos para el contenido de las divisiones internas */
+.division-interna {
+    flex: 1; /* Ocupa el espacio disponible horizontalmente */
+    padding: 0px;
+    height: 100%;
+    margin-left: 7%;
+    display: flex; /* Utiliza un diseño flexible */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en filas */
+}
+
+.division-interna2 {
+    flex: 1; /* Ocupa el espacio disponible horizontalmente */
+    padding: 1%;
+    height: 100%;
+    display: flex; /* Utiliza un diseño flexible */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en filas */
+    justify-content: center;
+}
+
+.boton-izquierdo {
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    background-size: 100% 100%;; /* Cambiamos "cover" por "contain" para asegurarnos de que la imagen se ajuste completamente en el botón */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.boton-1 {
+    background-image: url("../resources/p1.jpg");
+    background-color: transparent; /* Para ocultar el fondo por defecto del botón */
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    cursor: pointer; 
+}
+
+.boton-1:hover{
+    background-image: url("../resources/p1.jpg");
+    background-color: transparent;
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    border: none;
+}
+
+/* CSS para los botones en la cuadrícula */
+.boton-grid {
+    display: flex;
+    height: 25%;
+    width: 25%;
+    margin: 0%;
+    padding: 0%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.boton-grid button {
+    height: 95%; /* El botón ocupa todo el ancho del elemento de la cuadrícula */
+    width: 100%;
+    margin: 1%;
+    font-size: 70%;
+    border-radius: 10px;
+    padding: 0%;
+    color: black;
+    border: 0.25px solid black;
+    background-color: #ffffff;
+}
+
+.boton-2 {
+    background-image: url("../resources/p2.jpg");
+    background-color: transparent; /* Para ocultar el fondo por defecto del botón */
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    cursor: pointer; 
+}
+
+.boton-2:hover{
+    background-image: url("../resources/p2.jpg");
+    background-color: transparent;
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    border: none;
+}
+
+.boton-3 {
+    background-image: url("../resources/p3.jpg");
+    background-color: transparent; /* Para ocultar el fondo por defecto del botón */
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    cursor: pointer; 
+}
+
+.boton-3:hover{
+    background-image: url("../resources/p3.jpg");
+    background-color: transparent;
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    border: none;
+}
+
+.boton-4 {
+    background-image: url("../resources/p4.jpg");
+    background-color: transparent; /* Para ocultar el fondo por defecto del botón */
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    cursor: pointer; 
+}
+
+.boton-4:hover{
+    background-image: url("../resources/p4.jpg");
+    background-color: transparent;
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    border: none;
+}
+
+.boton-5 {
+    background-image: url("../resources/p5.jpg");
+    background-color: transparent; /* Para ocultar el fondo por defecto del botón */
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    cursor: pointer; 
+}
+
+.boton-5:hover{
+    background-image: url("../resources/p5.jpg");
+    background-color: transparent;
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    border: none;
+}
+
+.boton-6 {
+    background-image: url("../resources/p6.jpg");
+    background-color: transparent; /* Para ocultar el fondo por defecto del botón */
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    cursor: pointer; 
+}
+
+.boton-6:hover{
+    background-image: url("../resources/p6.jpg");
+    background-color: transparent;
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    border: none;
+}
+
+.boton-7 {
+    background-image: url("../resources/p7.jpg");
+    background-color: transparent; /* Para ocultar el fondo por defecto del botón */
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    cursor: pointer; 
+}
+
+.boton-7:hover{
+    background-image: url("../resources/p7.jpg");
+    background-color: transparent;
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    border: none;
+}
+
+.boton-8 {
+    background-image: url("../resources/p8.jpg");
+    background-color: transparent; /* Para ocultar el fondo por defecto del botón */
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    cursor: pointer; 
+}
+
+.boton-8:hover{
+    background-image: url("../resources/p8.jpg");
+    background-color: transparent;
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    border: none;
+}
+
+.boton-9 {
+    background-image: url("../resources/p9.jpg");
+    background-color: transparent; /* Para ocultar el fondo por defecto del botón */
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    cursor: pointer; 
+}
+
+.boton-9:hover{
+    background-image: url("../resources/p9.jpg");
+    background-color: transparent;
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    border: none;
+}
+
+.boton-10 {
+    background-image: url("../resources/p10.jpg");
+    background-color: transparent; /* Para ocultar el fondo por defecto del botón */
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    cursor: pointer; 
+}
+
+.boton-10:hover{
+    background-image: url("../resources/p10.jpg");
+    background-color: transparent;
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    border: none;
+}
+
+.boton-11 {
+    background-image: url("../resources/p11.jpg");
+    background-color: transparent; /* Para ocultar el fondo por defecto del botón */
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    cursor: pointer; 
+}
+
+.boton-11:hover{
+    background-image: url("../resources/p11.jpg");
+    background-color: transparent;
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    border: none;
+}
+
+.boton-12 {
+    background-image: url("../resources/p12.jpg");
+    background-color: transparent; /* Para ocultar el fondo por defecto del botón */
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    cursor: pointer; 
+}
+
+.boton-12:hover{
+    background-image: url("../resources/p12.jpg");
+    background-color: transparent;
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    border: none;
+}
+
+.boton-13 {
+    background-image: url("../resources/a1.jpg");
+    background-color: transparent; /* Para ocultar el fondo por defecto del botón */
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    cursor: pointer; 
+}
+
+.boton-13:hover{
+    background-image: url("../resources/a1.jpg");
+    background-color: transparent;
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    border: none;
+}
+.boton-14 {
+    background-image: url("../resources/a4.jpg");
+    background-color: transparent; /* Para ocultar el fondo por defecto del botón */
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    cursor: pointer; 
+}
+
+.boton-14:hover{
+    background-image: url("../resources/a4.jpg");
+    background-color: transparent;
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    border: none;
+}
+.boton-15 {
+    background-image: url("../resources/a7.jpg");
+    background-color: transparent; /* Para ocultar el fondo por defecto del botón */
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    cursor: pointer; 
+}
+
+.boton-15:hover{
+    background-image: url("../resources/a7.jpg");
+    background-color: transparent;
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    border: none;
+}
+
+.boton-16 {
+    background-image: url("../resources/a2.jpg");
+    background-color: transparent; /* Para ocultar el fondo por defecto del botón */
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    cursor: pointer; 
+}
+
+.boton-16:hover{
+    background-image: url("../resources/a2.jpg");
+    background-color: transparent;
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    border: none;
+}
+
+.boton-17 {
+    background-image: url("../resources/a5.jpg");
+    background-color: transparent; /* Para ocultar el fondo por defecto del botón */
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    cursor: pointer; 
+}
+
+.boton-17:hover{
+    background-image: url("../resources/a5.jpg");
+    background-color: transparent;
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    border: none;
+}
+
+.boton-18 {
+    background-image: url("../resources/a3.jpg");
+    background-color: transparent; /* Para ocultar el fondo por defecto del botón */
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    cursor: pointer; 
+}
+
+.boton-18:hover{
+    background-image: url("../resources/a3.jpg");
+    background-color: transparent;
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    border: none;
+}
+
+.boton-19 {
+    background-image: url("../resources/a6.jpg");
+    background-color: transparent; /* Para ocultar el fondo por defecto del botón */
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    cursor: pointer; 
+}
+
+.boton-19:hover{
+    background-image: url("../resources/a6.jpg");
+    background-color: transparent;
+    height: 100%; /* Establece la misma altura que el ancho para hacerlo cuadrado */
+    border-radius: 0%;
+    margin-top: 0px;
+    border: none;
+}

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simulador votacion</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+</head>
+<body>    
+    <section id="seccion1">
+        <img src="./resources/Picture1.png" alt="Imagen Picture1" id="headerImage">
+        <h1>Registro de Identificación</h1>
+        <div class="input-container">
+            <input type="text" id="identificacion" placeholder="No. Identificación (Cedula de ciudadania)">
+            <button class="botonmenu" onclick="guardarIdentificacion()">Ingresar</button>
+        </div>
+    </section>
+    <section id="seccion2" style="display: none;">
+        <div id="container">
+            <div id="block1">
+                Simulador - voto para el Concejo de Puerto Colombia
+                <p id="Parra">
+                    Marcar mas de una lista anula el voto.
+                </p>
+            </div>
+            <div id="block2">
+                <div class="columna columna-izquierda">
+                    <div class="division">
+                        <div class="division-interna">
+                            <button id="CR" class="boton-izquierdo boton-1" onclick="marcarBoton(this)"></button>
+                        </div>
+                        <div class="division-interna2">
+                            <div class="boton-grid">
+                                <button id="CR1" onclick="marcarBoton(this)">1</button>
+                                <button id="CR5" onclick="marcarBoton(this)">5</button>
+                                <button id="CR9" onclick="marcarBoton(this)">9</button>
+                                <button id="CR13" onclick="marcarBoton(this)">13</button>
+                            </div>
+                            <div class="boton-grid">
+                                <button id="CR2" onclick="marcarBoton(this)">2</button>
+                                <button id="CR6" onclick="marcarBoton(this)">6</button>
+                                <button id="CR10" onclick="marcarBoton(this)">10</button>                                
+                            </div>
+                            <div class="boton-grid">
+                                <button id="CR3" onclick="marcarBoton(this)">3</button>
+                                <button id="CR7" onclick="marcarBoton(this)">7</button>
+                                <button id="CR11" onclick="marcarBoton(this)">11</button>
+                            </div>
+                            <div class="boton-grid">
+                                <button id="CR4" onclick="marcarBoton(this)">4</button>
+                                <button id="CR8" onclick="marcarBoton(this)">8</button>
+                                <button id="CR12" onclick="marcarBoton(this)">12</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="division">
+                        <div class="division-interna">
+                            <button id="CC" class="boton-izquierdo boton-3" onclick="marcarBoton(this)"></button>
+                        </div>
+                        <div class="division-interna2">
+                            <div class="boton-grid">
+                                <button id="CC1" onclick="marcarBoton(this)">1</button>
+                                <button id="CC5" onclick="marcarBoton(this)">5</button>
+                                <button id="CC9" onclick="marcarBoton(this)"></button>
+                                <button id="CC13" onclick="marcarBoton(this)">13</button>
+                            </div>
+                            <div class="boton-grid">
+                                <button id="CC2" onclick="marcarBoton(this)">2</button>
+                                <button id="CC6" onclick="marcarBoton(this)">6</button>
+                                <button id="CC10" onclick="marcarBoton(this)">10</button>                                
+                            </div>
+                            <div class="boton-grid">
+                                <button id="CC3" onclick="marcarBoton(this)">3</button>
+                                <button id="CC7" onclick="marcarBoton(this)">7</button>
+                                <button id="CC11" onclick="marcarBoton(this)">11</button>
+                            </div>
+                            <div class="boton-grid">
+                                <button id="CC4" onclick="marcarBoton(this)">4</button>
+                                <button id="CC8" onclick="marcarBoton(this)"></button>
+                                <button id="CC12" onclick="marcarBoton(this)">12</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="division">
+                        <div class="division-interna">
+                            <button id="AICO" class="boton-izquierdo boton-5" onclick="marcarBoton(this)"></button>
+                        </div>
+                        <div class="division-interna2">
+                            <div class="boton-grid">
+                                <button id="AICO1" onclick="marcarBoton(this)">1</button>
+                                <button id="AICO5" onclick="marcarBoton(this)">5</button>
+                                <button id="AICO9" onclick="marcarBoton(this)"></button>
+                                <button id="AICO13" onclick="marcarBoton(this)">13</button>
+                            </div>
+                            <div class="boton-grid">
+                                <button id="AICO2" onclick="marcarBoton(this)">2</button>
+                                <button id="AICO6" onclick="marcarBoton(this)">6</button>
+                                <button id="AICO10" onclick="marcarBoton(this)">10</button>                                
+                            </div>
+                            <div class="boton-grid">
+                                <button id="AICO3" onclick="marcarBoton(this)">3</button>
+                                <button id="AICO7" onclick="marcarBoton(this)">7</button>
+                                <button id="AICO11" onclick="marcarBoton(this)">11</button>
+                            </div>
+                            <div class="boton-grid">
+                                <button id="AICO4" onclick="marcarBoton(this)">4</button>
+                                <button id="AICO8" onclick="marcarBoton(this)">8</button>
+                                <button id="AICO12" onclick="marcarBoton(this)">12</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="division">
+                        <div class="division-interna">
+                            <button id="LC" class="boton-izquierdo boton-7" onclick="marcarBoton(this)"></button>
+                        </div>
+                        <div class="division-interna2">
+                            <div class="boton-grid">
+                                <button id="LC1" onclick="marcarBoton(this)">1</button>
+                                <button id="LC5" onclick="marcarBoton(this)">5</button>
+                                <button id="LC9" onclick="marcarBoton(this)">9</button>
+                                <button id="LC13" onclick="marcarBoton(this)">13</button>
+                            </div>
+                            <div class="boton-grid">
+                                <button id="LC2" onclick="marcarBoton(this)">2</button>
+                                <button id="LC6" onclick="marcarBoton(this)">6</button>
+                                <button id="LC10" onclick="marcarBoton(this)">10</button>                                
+                            </div>
+                            <div class="boton-grid">
+                                <button id="LC3" onclick="marcarBoton(this)">3</button>
+                                <button id="LC7" onclick="marcarBoton(this)">7</button>
+                                <button id="LC11" onclick="marcarBoton(this)">11</button>
+                            </div>
+                            <div class="boton-grid">
+                                <button id="LC4" onclick="marcarBoton(this)">4</button>
+                                <button id="LC8" onclick="marcarBoton(this)">8</button>
+                                <button id="LC12" onclick="marcarBoton(this)">12</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="division">
+                        <div class="division-interna">
+                            <button id="MIRA" class="boton-izquierdo boton-9" onclick="marcarBoton(this)"></button>
+                        </div>
+                        <div class="division-interna2">
+                            <div class="boton-grid">
+                                <button id="MIRA1" onclick="marcarBoton(this)">1</button>
+                            </div>
+                            <div class="boton-grid">                              
+                            </div>
+                            <div class="boton-grid">
+                            </div>
+                            <div class="boton-grid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="division">
+                        <div class="division-interna">
+                            <button id="ASI" class="boton-izquierdo boton-11" onclick="marcarBoton(this)"></button>
+                        </div>
+                        <div class="division-interna2">
+                            <div class="boton-grid">
+                                <button id="ASI1" onclick="marcarBoton(this)">1</button>
+                                <button id="ASI5" onclick="marcarBoton(this)">5</button>
+                                <button id="ASI9" onclick="marcarBoton(this)">9</button>
+                                <button id="ASI13" onclick="marcarBoton(this)">13</button>
+                            </div>
+                            <div class="boton-grid">
+                                <button id="ASI2" onclick="marcarBoton(this)">2</button>
+                                <button id="ASI6" onclick="marcarBoton(this)">6</button>
+                                <button id="ASI10" onclick="marcarBoton(this)">10</button>                                
+                            </div>
+                            <div class="boton-grid">
+                                <button id="ASI3" onclick="marcarBoton(this)">3</button>
+                                <button id="ASI7" onclick="marcarBoton(this)">7</button>
+                                <button id="ASI11" onclick="marcarBoton(this)">11</button>
+                            </div>
+                            <div class="boton-grid">
+                                <button id="ASI4" onclick="marcarBoton(this)">4</button>
+                                <button id="ASI8" onclick="marcarBoton(this)">8</button>
+                                <button id="ASI12" onclick="marcarBoton(this)">12</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna columna-derecha">
+                    <div class="division">
+                        <div class="division-interna">
+                            <button id="CR" class="boton-izquierdo boton-2" onclick="marcarBoton(this)"></button>
+                        </div>
+                        <div class="division-interna2">
+                            <div class="boton-grid">
+                                <button id="CR1" onclick="marcarBoton(this)">1</button>
+                                <button id="CR5" onclick="marcarBoton(this)">5</button>
+                                <button id="CR9" onclick="marcarBoton(this)"></button>
+                                <button id="CR13" onclick="marcarBoton(this)">13</button>
+                            </div>
+                            <div class="boton-grid">
+                                <button id="CR2" onclick="marcarBoton(this)">2</button>
+                                <button id="CR6" onclick="marcarBoton(this)">6</button>
+                                <button id="CR10" onclick="marcarBoton(this)">10</button>                                
+                            </div>
+                            <div class="boton-grid">
+                                <button id="CR3" onclick="marcarBoton(this)">3</button>
+                                <button id="CR7" onclick="marcarBoton(this)">7</button>
+                                <button id="CR11" onclick="marcarBoton(this)">11</button>
+                            </div>
+                            <div class="boton-grid">
+                                <button id="CR4" onclick="marcarBoton(this)">4</button>
+                                <button id="CR8" onclick="marcarBoton(this)">8</button>
+                                <button id="CR12" onclick="marcarBoton(this)">12</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="division">
+                        <div class="division-interna">
+                            <button id="DC" class="boton-izquierdo boton-4" onclick="marcarBoton(this)"></button>
+                        </div>
+                        <div class="division-interna2">
+                            <div class="boton-grid">
+                                <button id="DC1" onclick="marcarBoton(this)">1</button>
+                                <button id="DC5" onclick="marcarBoton(this)">5</button>
+                                <button id="DC9" onclick="marcarBoton(this)"></button>
+                                <button id="DC13" onclick="marcarBoton(this)">13</button>
+                            </div>
+                            <div class="boton-grid">
+                                <button id="DC2" onclick="marcarBoton(this)">2</button>
+                                <button id="DC6" onclick="marcarBoton(this)">6</button>
+                                <button id="DC10" onclick="marcarBoton(this)">10</button>                                
+                            </div>
+                            <div class="boton-grid">
+                                <button id="DC3" onclick="marcarBoton(this)"></button>
+                                <button id="DC7" onclick="marcarBoton(this)"></button>
+                                <button id="DC11" onclick="marcarBoton(this)">11</button>
+                            </div>
+                            <div class="boton-grid">
+                                <button id="DC4" onclick="marcarBoton(this)">4</button>
+                                <button id="DC8" onclick="marcarBoton(this)">8</button>
+                                <button id="DC12" onclick="marcarBoton(this)">12</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="division">
+                        <div class="division-interna">
+                            <button id="PDC" class="boton-izquierdo boton-6" onclick="marcarBoton(this)"></button>
+                        </div>
+                        <div class="division-interna2">
+                            <div class="boton-grid">
+                                <button id="PDC1" onclick="marcarBoton(this)">1</button>
+                                <button id="PDC5" onclick="marcarBoton(this)">5</button>
+                                <button id="PDC9" onclick="marcarBoton(this)">9</button>
+                                <button id="PDC13" onclick="marcarBoton(this)">13</button>
+                            </div>
+                            <div class="boton-grid">
+                                <button id="PDC2" onclick="marcarBoton(this)">2</button>
+                                <button id="PDC6" onclick="marcarBoton(this)">6</button>
+                                <button id="PDC10" onclick="marcarBoton(this)">10</button>                                
+                            </div>
+                            <div class="boton-grid">
+                                <button id="PDC3" onclick="marcarBoton(this)">3</button>
+                                <button id="PDC7" onclick="marcarBoton(this)">7</button>
+                                <button id="PDC11" onclick="marcarBoton(this)">11</button>
+                            </div>
+                            <div class="boton-grid">
+                                <button id="PDC4" onclick="marcarBoton(this)">4</button>
+                                <button id="PDC8" onclick="marcarBoton(this)">8</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="division">
+                        <div class="division-interna">
+                            <button id="CD" class="boton-izquierdo boton-8" onclick="marcarBoton(this)"></button>
+                        </div>
+                        <div class="division-interna2">
+                            <div class="boton-grid">
+                                <button id="CD1" onclick="marcarBoton(this)">1</button>
+                            </div>
+                            <div class="boton-grid">
+                                <button id="CD2" onclick="marcarBoton(this)">2</button>                               
+                            </div>
+                            <div class="boton-grid">
+                                <button id="CD3" onclick="marcarBoton(this)">3</button>
+                            </div>
+                            <div class="boton-grid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="division">
+                        <div class="division-interna">
+                            <button id="U" class="boton-izquierdo boton-10" onclick="marcarBoton(this)"></button>
+                        </div>
+                        <div class="division-interna2">
+                            <div class="boton-grid">
+                                <button id="U1" onclick="marcarBoton(this)">1</button>
+                                <button id="U5" onclick="marcarBoton(this)">5</button>
+                                <button id="U9" onclick="marcarBoton(this)">9</button>
+                            </div>
+                            <div class="boton-grid">
+                                <button id="U2" onclick="marcarBoton(this)">2</button>
+                                <button id="U6" onclick="marcarBoton(this)">6</button>
+                                <button id="U10" onclick="marcarBoton(this)">10</button>                                
+                            </div>
+                            <div class="boton-grid">
+                                <button id="U3" onclick="marcarBoton(this)">3</button>
+                                <button id="U7" onclick="marcarBoton(this)">7</button>
+                                <button id="U11" onclick="marcarBoton(this)">11</button>
+                            </div>
+                            <div class="boton-grid">
+                                <button id="U4" onclick="marcarBoton(this)"></button>
+                                <button id="U8" onclick="marcarBoton(this)">8</button>
+                                <button id="U12" onclick="marcarBoton(this)">12</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="division">
+                        <div class="division-interna">
+                            <button id="VBC" class="boton-izquierdo boton-12" onclick="marcarBoton(this)"></button>
+                        </div>
+                        <div class="division-interna2">                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="block3">
+                <button class="botonmenu" onclick="enviarVoto()">Votar</button>
+            </div>
+        </div>
+    </section>
+    <section id="seccion4" style="display: none;">
+        <div id="container">
+            <div id="block1">
+                Simulador - voto para la Alcaldia de Puerto Colombia
+            </div>
+            <div id="block2">
+                <div class="columna columna-centro">
+                    <div class="division2">
+                        <div class="division-interna">
+                            <button id="JA" class="boton-izquierdo boton-13" onclick="marcarBoton(this)"></button>
+                        </div>
+                    </div>
+                    <div class="division2">
+                        <div class="division-interna">
+                            <button id="EM" class="boton-izquierdo boton-14" onclick="marcarBoton(this)"></button>
+                        </div>
+                    </div>
+                    <div class="division2">
+                        <div class="division-interna">
+                            <button id="VBA" class="boton-izquierdo boton-15" onclick="marcarBoton(this)"></button>
+                        </div>                       
+                    </div>
+                </div>
+                <div class="columna columna-centro">
+                    <div class="division2">
+                        <div class="division-interna">
+                            <button id="PC" class="boton-izquierdo boton-16" onclick="marcarBoton(this)"></button>
+                        </div>                        
+                    </div>
+                    <div class="division2">
+                        <div class="division-interna">
+                            <button id="JS" class="boton-izquierdo boton-17" onclick="marcarBoton(this)"></button>
+                        </div>                       
+                    </div>
+                </div>
+                <div class="columna columna-centro">
+                    <div class="division2">
+                        <div class="division-interna">
+                            <button id="HR" class="boton-izquierdo boton-18" onclick="marcarBoton(this)"></button>
+                        </div>                        
+                    </div>
+                    <div class="division2">
+                        <div class="division-interna">
+                            <button id="DM" class="boton-izquierdo boton-19" onclick="marcarBoton(this)"></button>
+                        </div>                       
+                    </div>
+                </div>
+            </div>
+            <div id="block3">
+                <button class="botonmenu" onclick="enviarVoto2()">Votar</button>
+            </div>
+        </div>
+    </section>
+    <section id="seccion3" style="display: none;">
+        <img src="./resources/Picture1.png" alt="Imagen Picture1" id="headerImage">
+        <h1>Muchas gracias por tu votacion!</h1>
+        <div class="agradecimiento-content">
+            <p>Ten presente que este 29 octubre debes votar ASI 5 al Concejo de Puerto Colombia.</p>
+            <input type="tel" id="telefono" placeholder="Número de Teléfono">
+            <button class="botonmenu" onclick="enviarDatos()">Enviar</button>
+        </div>
+    </section>
+    <script src="./js/script.js"></script>
+</body>
+</html>
